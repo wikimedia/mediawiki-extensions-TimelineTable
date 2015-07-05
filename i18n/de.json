@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"timelinetable-desc": "Erstellt eine Tabelle, die eine Zeitleiste enthält",
+	"timelinetable-error-parsestart": "Fehler beim Parsen des Ereignisbeginns: $1.",
+	"timelinetable-error-parseend": "Fehler beim Parsen des Ereignisendes: $1.",
+	"timelinetable-error-parseargs": "Fehler beim Parsen der Ereignisdaten: $1.",
+	"timelinetable-error-overlap": "Ereignisse auf der gleichen Linie überlappen sich: $1.",
+	"timelinetable-error-free": "Fehler beim Abrufen des führenden/angehängten Freetime-Blocks bei Zeile $1.",
+	"timelinetable-error-depth": "Der Tiefenparameter konnte nicht abgerufen werden.",
+	"timelinetable-error-hf": "Fehler beim Lesen der Header/Footer: $1=$2.",
+	"timelinetable-error-negdate": "Das Enddatum sollte später als das Startdatum sein: $1."
+}

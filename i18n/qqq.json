@@ -1,16 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "thibault marin"
-        ]
-    },
-    "timelinetable-desc": "{{desc}}",
-    "timelinetable-error-parsestart": "This is an error message shown when the start of an event is not a proper date entry (parsing failed, $1 is the exception message returned by DateTime constructor).",
-    "timelinetable-error-parseend": "This is an error message shown when the end of an event is not a proper date entry (parsing failed, $1 is the exception message returned by DateTime constructor).",
-    "timelinetable-error-parseargs": "This is an error message shown when the start or end date could not be found.",
-    "timelinetable-error-overlap": "This is an error message shown when two events in the same table line overlap ($1 is the input with overlapping dates).",
-    "timelinetable-error-free": "This is an error message shown when something went wrong during input parsing ($1 is index of the erroneous row in the input table).",
-    "timelinetable-error-depth": "This is an error message shown when the depth argument is missing and could not be guessed from the first date in the table.",
-    "timelinetable-error-hf": "This is an error message shown when the headers/footers option could not be parsed ($1 is the parameter name, $2 is the parameter value).",
-    "timelinetable-error-negdate": "This is an error message shown when an event has a start date later than the end date ($1 is the erroneous input line)."
+	"@metadata": {
+		"authors": [
+			"thibault marin"
+		]
+	},
+	"timelinetable-desc": "{{desc}}",
+	"timelinetable-error-parsestart": "This is an error message shown when the start of an event is not a proper date entry (parsing failed, $1 is the exception message returned by DateTime constructor).",
+	"timelinetable-error-parseend": "This is an error message shown when the end of an event is not a proper date entry (parsing failed, $1 is the exception message returned by DateTime constructor).",
+	"timelinetable-error-parseargs": "This is an error message shown when the start or end date could not be found.",
+	"timelinetable-error-overlap": "This is an error message shown when two events in the same table line overlap ($1 is the input with overlapping dates).",
+	"timelinetable-error-free": "This is an error message shown when something went wrong during input parsing ($1 is index of the erroneous row in the input table).",
+	"timelinetable-error-depth": "This is an error message shown when the depth argument is missing and could not be guessed from the first date in the table.",
+	"timelinetable-error-hf": "This is an error message shown when the headers/footers option could not be parsed ($1 is the parameter name, $2 is the parameter value).",
+	"timelinetable-error-negdate": "This is an error message shown when an event has a start date later than the end date ($1 is the erroneous input line)."
 }
