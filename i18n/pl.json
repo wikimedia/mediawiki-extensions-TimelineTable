@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"timelinetable-error-negdate": "Data zakończenia musi być późniejsza niż data rozpoczęcia: $1."
+}

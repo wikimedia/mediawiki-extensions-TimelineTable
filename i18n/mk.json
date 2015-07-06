@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"timelinetable-desc": "Создавање на табели што содржат времеслед",
+	"timelinetable-error-parsestart": "Грешка при расчленувањето на почетокот на настанот: $1.",
+	"timelinetable-error-parseend": "Грешка при расчленувањето на крајот на настанот: $1.",
+	"timelinetable-error-parseargs": "Грешка при расчленувањето на датумите на настанот: $1.",
+	"timelinetable-error-overlap": "Настаните во истиот ред се преклопуваат: $1.",
+	"timelinetable-error-free": "Грешка при добивањето на почетниот/завршниот слободновременски блок во ред $1.",
+	"timelinetable-error-depth": "Не можев да го добијам параметарот за длабочина.",
+	"timelinetable-error-hf": "Грешка при вчитувањето на заглавјата/подножјата: $1=$2.",
+	"timelinetable-error-negdate": "Завршниот датум треба да е подоцна од почетниот: $1."
+}

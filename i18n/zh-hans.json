@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"timelinetable-desc": "创建一个包含时间线的表格",
+	"timelinetable-error-parsestart": "解析活动起始日时出错：$1。",
+	"timelinetable-error-parseend": "解析活动结束日时出错：$1。",
+	"timelinetable-error-parseargs": "解析活动日期时出错：$1。",
+	"timelinetable-error-overlap": "同一时间线上出现重复的活动：$1。",
+	"timelinetable-error-free": "获取时间线$1上的开头/末尾自由时间块时出错。",
+	"timelinetable-error-depth": "不能获得深度参数。",
+	"timelinetable-error-hf": "读取页眉/页脚时出错：$1=$2。",
+	"timelinetable-error-negdate": "结束日期应该晚于起始日期：$1。"
+}

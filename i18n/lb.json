@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"timelinetable-error-negdate": "De Schlussdatum muss nom Ufanksdatum sinn: $1."
+}

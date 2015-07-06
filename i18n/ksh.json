@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"timelinetable-desc": "Lääsch en Tabäll aan, woh ene Verlouf vun de Zigg dren es.",
+	"timelinetable-error-parsestart": "Ene Fähler es opjetrodde beim Verschtonn vum Bejenn: $1",
+	"timelinetable-error-parseend": "Mer kunnte et Ämgk nit verschtonn: $1",
+	"timelinetable-error-parseargs": "Ene Fähler es opjetrodde beim Verschtonn vun de Datte: $1",
+	"timelinetable-error-overlap": "En eine Reih sinn_er zwei Saache janz udder zom Deil zor jlische Zigg: $1",
+	"timelinetable-error-free": "Mer kunnte dä Aanfang udder et Ängk nit verschtonn en de Reih $1.",
+	"timelinetable-error-depth": "Dä Parramehter för de Deefde kunnt nit beschtemmp wähde.",
+	"timelinetable-error-hf": "Mer kunnte Köpp udder Föhß nit verschtonn: $1=$2.",
+	"timelinetable-error-negdate": "Et sullt schunn nohm Bejenn ophüre un nit fröhjer: $1"
+}
