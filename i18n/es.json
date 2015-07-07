@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe"
+		]
+	},
+	"timelinetable-desc": "Crear una tabla que contenga una línea de tiempo",
+	"timelinetable-error-overlap": "Se superponen eventos en la misma línea: $1.",
+	"timelinetable-error-depth": "No se pudo obtener el parámetro de profundidad.",
+	"timelinetable-error-negdate": "La fecha de finalización debe ser posterior a la de inicio: $1."
+}

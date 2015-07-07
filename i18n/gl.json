@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"timelinetable-desc": "Crear unha táboa que conteña unha liña de tempo",
+	"timelinetable-error-parsestart": "Erro analizando comezo de evento: $1.",
+	"timelinetable-error-parseend": "Erro analizando fin de evento: $1.",
+	"timelinetable-error-parseargs": "Erro analizando datas de evento: $1.",
+	"timelinetable-error-overlap": "Superpóñense eventos na misma liña: $1.",
+	"timelinetable-error-depth": "Non se puido obter o parámetro de profundidade.",
+	"timelinetable-error-hf": "Erro lendo cabeceiras/pés: $1=$2.",
+	"timelinetable-error-negdate": "A data de finalización debe ser posterior á de inicio: $1."
+}
