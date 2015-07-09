@@ -5,7 +5,12 @@
 		]
 	},
 	"timelinetable-desc": "Crear una tabla que contenga una línea de tiempo",
+	"timelinetable-error-parsestart": "Error al analizar el inicio del evento: $1.",
+	"timelinetable-error-parseend": "Error al analizar el fin del evento: $1.",
+	"timelinetable-error-parseargs": "Error al analizar las fechas del evento: $1.",
 	"timelinetable-error-overlap": "Se superponen eventos en la misma línea: $1.",
+	"timelinetable-error-free": "Error al obtener el bloque de tiempo libre en la línea $1.",
 	"timelinetable-error-depth": "No se pudo obtener el parámetro de profundidad.",
+	"timelinetable-error-hf": "Error al leer encabezados/pies de página: $1=$2.",
 	"timelinetable-error-negdate": "La fecha de finalización debe ser posterior a la de inicio: $1."
 }
