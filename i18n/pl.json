@@ -4,5 +4,6 @@
 			"Chrumps"
 		]
 	},
+	"timelinetable-error-hf": "Błąd odczytu nagłówków/stopek: $1=$2.",
 	"timelinetable-error-negdate": "Data zakończenia musi być późniejsza niż data rozpoczęcia: $1."
 }
