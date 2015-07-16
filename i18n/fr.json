@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"timelinetable-desc": "Créer une table contenant un calendrier",
+	"timelinetable-error-parsestart": "Erreur sur la date de début d'événement : $1.",
+	"timelinetable-error-parseend": "Erreur lors de l'analyse de fin d'événement : $1.",
+	"timelinetable-error-parseargs": "Erreur lors de l'analyse des dates de l'événement: $1.",
+	"timelinetable-error-overlap": "Des événements de chevauchement sur la même ligne : $1.",
+	"timelinetable-error-free": "Erreur en tentant d'obtenir le bloc de temps libre de début ou de fin à la ligne $1.",
+	"timelinetable-error-depth": "Impossible d'obtenir le paramètre de profondeur.",
+	"timelinetable-error-hf": "Erreur lors de la lecture des en-têtes/pieds-de-page: $1=$2.",
+	"timelinetable-error-negdate": "La date de fin doit être ultérieure à la date de début: $1."
+}
