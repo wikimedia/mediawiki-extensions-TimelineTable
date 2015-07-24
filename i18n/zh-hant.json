@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416"
+		]
+	},
+	"timelinetable-desc": "建立有時間軸的表格",
+	"timelinetable-error-parsestart": "解析事件開始錯誤：$1。",
+	"timelinetable-error-parseend": "解析事件結束錯誤：$1。",
+	"timelinetable-error-parseargs": "解析事件日期錯誤：$1。",
+	"timelinetable-error-overlap": "事件位於同一條時間軸重複：$1。",
+	"timelinetable-error-free": "取得起始/結尾空閒時間區塊錯誤於行 $1。",
+	"timelinetable-error-depth": "無法取得深度參數。",
+	"timelinetable-error-hf": "讀取頁首/頁尾錯誤：$1=$2。",
+	"timelinetable-error-negdate": "結束日期應大於開始日期：$1。"
+}
