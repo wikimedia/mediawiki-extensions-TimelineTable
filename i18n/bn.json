@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"timelinetable-desc": "সময়ক্রম ধারণকারী একটি টেবিল বা ছক তৈরি করে",
+	"timelinetable-error-parsestart": "পার্সিং ইভেন্ট শুরুর ত্রুটি: $1।",
+	"timelinetable-error-parseend": "পার্সিং ইভেন্ট শেষের ত্রুটি: $1।",
+	"timelinetable-error-parseargs": "পার্সিং ইভেন্ট তারিখের ত্রুটি: $1।",
+	"timelinetable-error-overlap": "একই লাইন ওভারল্যাপে ইভেন্ট: $1।",
+	"timelinetable-error-depth": "গভীরতার প্যারামিটার সংগ্রহ করা যায়নি।",
+	"timelinetable-error-hf": "পড়ার শীর্ষচরন/পাদলেখতে ত্রুটি: $1=$2।",
+	"timelinetable-error-negdate": "শেষের তারিখ শুরুর তারিখের পরে হতে হবে: $1।"
+}
