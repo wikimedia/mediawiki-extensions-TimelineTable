@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"timelinetable-desc": "Crear una tabla que contenga una cronoloxía",
+	"timelinetable-error-parsestart": "Error al analizar el principiu d'actividá: $1.",
+	"timelinetable-error-parseend": "Error al analizar el final d'actividá: $1.",
+	"timelinetable-error-parseargs": "Error al analizar les dates d'actividá: $1.",
+	"timelinetable-error-overlap": "Hai actividaes superpuestes na mesma llinia: $1.",
+	"timelinetable-error-free": "Error al algamar el bloque de tiempu llibre al principiu/final de la llinia $1.",
+	"timelinetable-error-depth": "Nun pudo algamase'l parámetru de fondura.",
+	"timelinetable-error-hf": "Error al lleer les testeres/pies de páxina: $1=$2.",
+	"timelinetable-error-negdate": "La data final tien de ser posterior a la d'aniciu: $1."
+}
