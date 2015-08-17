@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"timelinetable-desc": "Створити таблицю, що містить часову діаграму",
+	"timelinetable-error-parsestart": "Помилка старту події синтаксичного аналізу: $1.",
+	"timelinetable-error-parseend": "Помилка закінчення події синтаксичного аналізу: $1.",
+	"timelinetable-error-parseargs": "Помилка дат події синтаксичного аналізу: $1.",
+	"timelinetable-error-overlap": "Перекриття події на тій самій лінії: $1"
+}
