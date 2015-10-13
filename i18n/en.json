@@ -1,16 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "thibault marin"
-        ]
-    },
-    "timelinetable-desc": "Create a table containing a timeline",
-    "timelinetable-error-parsestart": "Error parsing event start: $1.",
-    "timelinetable-error-parseend": "Error parsing event end: $1.",
-    "timelinetable-error-parseargs": "Error parsing event dates: $1.",
-    "timelinetable-error-overlap": "Events on the same line overlap: $1.",
-    "timelinetable-error-free": "Error getting leading/trailing freetime block at line $1.",
-    "timelinetable-error-depth": "Could not obtain depth parameter.",
-    "timelinetable-error-hf": "Error reading headers/footers: $1=$2.",
-    "timelinetable-error-negdate": "End date should be later than start date: $1."
+	"@metadata": {
+		"authors": [
+			"thibault marin"
+		]
+	},
+	"timelinetable-desc": "Create a table containing a timeline",
+	"timelinetable-error-parsestart": "Error parsing event start: $1.",
+	"timelinetable-error-parseend": "Error parsing event end: $1.",
+	"timelinetable-error-parseargs": "Error parsing event dates: $1.",
+	"timelinetable-error-overlap": "Events on the same line overlap: $1.",
+	"timelinetable-error-free": "Error getting leading/trailing freetime block at line $1.",
+	"timelinetable-error-depth": "Could not obtain depth parameter.",
+	"timelinetable-error-hf": "Error reading headers/footers: $1=$2.",
+	"timelinetable-error-negdate": "End date should be later than start date: $1."
 }
