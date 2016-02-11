@@ -2,13 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Alexmar983",
-			"Beta16"
+			"Beta16",
+			"Fringio"
 		]
 	},
 	"timelinetable-desc": "Creare una tabella contenente una timeline",
 	"timelinetable-error-parsestart": "Errore nell'analisi dell'inizio dell'evento: $1.",
 	"timelinetable-error-parseend": "Errore nell'analisi della fine dell'evento: $1.",
 	"timelinetable-error-parseargs": "Errore nell'analisi delle date dell'evento: $1.",
+	"timelinetable-error-overlap": "Eventi sulla stessa linea si sovrappongono: $1.",
 	"timelinetable-error-depth": "Potrebbe non ottenere parametro di profondità.",
 	"timelinetable-error-hf": "Errore di lettura dell'intestazione/piè di pagina: $1=$2.",
 	"timelinetable-error-negdate": "La data di fine deve essere successiva alla data di inizio: $1"
