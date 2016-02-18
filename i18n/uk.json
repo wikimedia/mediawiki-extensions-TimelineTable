@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата"
+			"Ата",
+			"Piramidion"
 		]
 	},
 	"timelinetable-desc": "Створити таблицю, що містить часову діаграму",
@@ -9,6 +10,7 @@
 	"timelinetable-error-parseend": "Помилка закінчення події синтаксичного аналізу: $1.",
 	"timelinetable-error-parseargs": "Помилка дат події синтаксичного аналізу: $1.",
 	"timelinetable-error-overlap": "Перекриття події на тій самій лінії: $1",
+	"timelinetable-error-free": "Помилка при отриманні початкового/кінцевого блоку з вільним часом в рядку $1.",
 	"timelinetable-error-depth": "Не вдалося отримати параметр глибини.",
 	"timelinetable-error-hf": "Помилка при читанні заголовка/нижніх колонтитулів: $1=$2.",
 	"timelinetable-error-negdate": "Кінцева дата повинна бути пізнішою, ніж початкова: $1."
