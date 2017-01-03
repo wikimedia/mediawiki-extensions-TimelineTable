@@ -8,7 +8,7 @@
  *
  * @ingroup Extensions
  * @author Thibault Marin
- * @link http://www.mediawiki.org/wiki/Extension:TimelineTable
+ * @link https://www.mediawiki.org/wiki/Extension:TimelineTable
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  *
  * @revision
@@ -62,7 +62,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'version' => '2.1',
 	'author' => 'Thibault Marin',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:TimelineTable',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:TimelineTable',
 	'descriptionmsg' => 'timelinetable-desc'
 );
 
