@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Facenapalm"
+		]
+	},
+	"timelinetable-desc": "Создание таблиц, содержащих временную шкалу",
+	"timelinetable-error-parsestart": "Ошибка парсинга начала события: $1.",
+	"timelinetable-error-parseend": "Ошибка парсинга конца события: $1.",
+	"timelinetable-error-parseargs": "Ошибка парсинга дат события: $1.",
+	"timelinetable-error-overlap": "События на одной линии накладываются: $1.",
+	"timelinetable-error-free": "Ошибка получения лидирующих/отстающих свободных блоков в строке $1.",
+	"timelinetable-error-depth": "Невозможно получить параметр depth.",
+	"timelinetable-error-hf": "Ошибка чтения заголовков/сносок: $1=$2",
+	"timelinetable-error-negdate": "Дата конца должна быть позже даты начала: $1."
+}
