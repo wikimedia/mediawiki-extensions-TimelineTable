@@ -1,8 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Hamilton Abreu"
 		]
 	},
-	"timelinetable-desc": "Cria uma tabela que contém uma cronologia"
+	"timelinetable-desc": "Cria uma tabela que contém uma cronologia",
+	"timelinetable-error-parsestart": "Erro ao analisar o início do evento: $1.",
+	"timelinetable-error-parseend": "Erro ao analisar o fim do evento: $1.",
+	"timelinetable-error-parseargs": "Erro ao analisar as datas do evento: $1.",
+	"timelinetable-error-overlap": "Eventos da mesma cronologia estão sobrepostos: $1.",
+	"timelinetable-error-free": "Erro ao obter o bloco inicial ou final de tempo livre na cronologia $1.",
+	"timelinetable-error-depth": "Não foi possível obter o parâmetro de profundidade.",
+	"timelinetable-error-hf": "Erro ao ler cabeçalhos ou rodapés: $1=$2.",
+	"timelinetable-error-negdate": "A data de fim tem de ser posterior à data de início: $1."
 }
