@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"timelinetable-desc": "إنشاء جدول يحتوي على جدول زمني",
+	"timelinetable-error-parsestart": "خطأ في تحليل بداية الحدث: $1.",
+	"timelinetable-error-parseend": "خطأ في تحليل نهاية الحدث: $1.",
+	"timelinetable-error-parseargs": "خطأ في تحليل تواريخ الأحداث: $1.",
+	"timelinetable-error-overlap": "تتداخل الأحداث على نفس السطر: $1.",
+	"timelinetable-error-depth": "لا يمكن الحصول على وسيط العمق.",
+	"timelinetable-error-hf": "خطأ في قراءة الرؤوس/التذييلات: $1=$2.",
+	"timelinetable-error-negdate": "يجب أن يكون تاريخ الانتهاء متأخرا عن تاريخ البدء: $1."
+}
