@@ -396,7 +396,7 @@ class TimelineTableTable {
 			}
 		}
 
-		// Return an empty string on succes (no error message)
+		// Return an empty string on success (no error message)
 		return "";
 	}
 
