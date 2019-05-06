@@ -4,5 +4,12 @@
 			"Joetaras"
 		]
 	},
-	"timelinetable-desc": "Ccreje 'na tabbelle ca tène 'na linèe d'u tiembe"
+	"timelinetable-desc": "Ccreje 'na tabbelle ca tène 'na linèe d'u tiembe",
+	"timelinetable-error-parsestart": "Errore jndr'à l'analise de l'inizie d'u fatte: $1.",
+	"timelinetable-error-parseend": "Errore jndr'à l'analise d'a fine d'u fatte: $1.",
+	"timelinetable-error-parseargs": "Errore jndr'à l'analise de le date d'u fatte: $1.",
+	"timelinetable-error-overlap": "Fatte sus 'a stessa linèe se mettene une sus a l'otre: $1.",
+	"timelinetable-error-depth": "Pò essere ca non ge pigghie 'u parametre de profonnetà.",
+	"timelinetable-error-hf": "Errore leggenne 'ndestaziune/piè de pàgene: $1=$2.",
+	"timelinetable-error-negdate": "'A date de fine adda venè apprisse a quedde de inizie: $1"
 }
