@@ -22,6 +22,9 @@ class TimelineTableHooks {
 		// find markers in $text
 		// replace markers with actual output
 		global $markerList;
+		if ( !isset( $markerList ) ) {
+			return true;
+		}
 		for ( $i = 0; $i < count( $markerList ); $i++ ) {
 			$text = preg_replace( '/xx-marker' . $i . '-xx/',
 				$markerList[$i], $text );
@@ -350,4 +353,3 @@ class TimelineTableHooks {
 		return self::makeOutputString( $timeline_str );
 	}
 }
-
