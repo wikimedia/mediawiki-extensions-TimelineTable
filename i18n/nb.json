@@ -4,5 +4,13 @@
 			"Jon Harald Søby"
 		]
 	},
-	"timelinetable-desc": "Skap en tabell som inneholder ei tidslinje"
+	"timelinetable-desc": "Skap en tabell som inneholder ei tidslinje",
+	"timelinetable-error-parsestart": "Feil under tolking av hendelsesstart: $1.",
+	"timelinetable-error-parseend": "Feil under tolking av hendelsesslutt: $1.",
+	"timelinetable-error-parseargs": "Feil under tolking av hendelsesdatoer: $1.",
+	"timelinetable-error-overlap": "Hendelser på samme linje overlapper: $1.",
+	"timelinetable-error-free": "Feil under henting av innledende/avsluttende fritidsblokk på linje $1.",
+	"timelinetable-error-depth": "Kunne ikke hente dybdeparameter.",
+	"timelinetable-error-hf": "Feil under lesing av headere/footere: $1=$2.",
+	"timelinetable-error-negdate": "Sluttdatoen bør være etter startdatoen: $1."
 }
