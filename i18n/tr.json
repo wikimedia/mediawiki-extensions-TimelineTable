@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"timelinetable-desc": "Zaman çizelgesi içeren bir tablo oluşturun",
+	"timelinetable-error-parsestart": "Etkinlik başlangıcında ayrıştırma hatası: $1.",
+	"timelinetable-error-parseend": "Etkinlik sonu ayrıştırma hatası: $1.",
+	"timelinetable-error-parseargs": "Etkinlik tarihlerini ayrıştırma hatası: $1.",
+	"timelinetable-error-overlap": "Aynı satırdaki olaylar çakışıyor: $1.",
+	"timelinetable-error-free": "$1 satırında önde gelen/sondaki boş zaman bloğu alma hatası.",
+	"timelinetable-error-depth": "Derinlik parametresi alınamadı.",
+	"timelinetable-error-hf": "Üstbilgiler/altbilgiler okunurken hata oluştu: $1=$2.",
+	"timelinetable-error-negdate": "Bitiş tarihi, başlangıç tarihinden sonra olmalıdır: $1."
+}
