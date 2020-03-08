@@ -1,41 +1,6 @@
 <?php
 
 /**
- * Class with constant descriptors for depth.
- */
-abstract class TimelineTableDepthDesc {
-
-	const Year = 0;
-	const Month = 1;
-	const Week = 2;
-	const Day = 3;
-	const Hour = 4;
-	const Minute = 5;
-	const Second = 6;
-
-	static public function decodeDepthDesc( $str ) {
-		switch ( strtolower( $str ) ) {
-			case "year":
-				return self::Year;
-			case "month":
-				return self::Month;
-			case "week":
-				return self::Week;
-			case "day":
-				return self::Day;
-			case "hour":
-				return self::Hour;
-			case "minute":
-				return self::Minute;
-			case "second":
-				return self::Second;
-			default:
-				return null;
-		}
-	}
-}
-
-/**
  * Helper class for date operations:
  *  -calculate the number of cells between two dates depending on the depth
  *  -get first/last day of a given year
@@ -47,7 +12,7 @@ class TimelineTableDateDiffHelper {
 	 */
 	public static function getFirstDay( &$date, $year ) {
 		$date->modify( "first day of january " . $year );
-		$date->setTime(0, 0, 0);
+		$date->setTime( 0, 0, 0 );
 	}
 
 	/**
@@ -55,14 +20,13 @@ class TimelineTableDateDiffHelper {
 	 */
 	public static function getLastDay( &$date, $year ) {
 		$date->modify( "last day of december " . $year );
-		$date->setTime(23, 59, 59);
+		$date->setTime( 23, 59, 59 );
 	}
 
 	/**
 	 * Calculate the number of cells between two dates (public interface)
 	 */
 	public static function getNumCells( $date1, $date2, $depth ) {
-
 		if ( !is_a( $date1, "DateTime" ) || !is_a( $date2, "DateTime" ) ) {
 			return null;
 		}
@@ -159,8 +123,8 @@ class TimelineTableDateDiffHelper {
 				$h2 = intval( $date2->format( "H" ) );
 				$m1 = intval( $date1->format( "i" ) );
 				$m2 = intval( $date2->format( "i" ) );
-				$nMinutes = $int->days * 24 * 60 + ($h2 - $h1) * 60 +
-				            $m2 - $m1 + 1;
+				$nMinutes = $int->days * 24 * 60 + ( $h2 - $h1 ) * 60 +
+							$m2 - $m1 + 1;
 
 				return ( $int->invert ? -1 : 1 ) * $nMinutes;
 
@@ -172,11 +136,10 @@ class TimelineTableDateDiffHelper {
 				$m2 = intval( $date2->format( "i" ) );
 				$s1 = intval( $date1->format( "s" ) );
 				$s2 = intval( $date2->format( "s" ) );
-				$nSeconds = $int->days * 24 * 3600 + ($h2 - $h1) * 3600 +
-				            ($m2 - $m1) * 60 + $s2 - $s1 + 1;
+				$nSeconds = $int->days * 24 * 3600 + ( $h2 - $h1 ) * 3600 +
+							( $m2 - $m1 ) * 60 + $s2 - $s1 + 1;
 
 				return ( $int->invert ? -1 : 1 ) * $nSeconds;
 		}
 	}
 }
-

@@ -42,7 +42,6 @@ class TimelineTableEvent {
 	 * Parse event from string
 	 */
 	public function parse( $input, $separator ) {
-
 		$fields = explode( $separator, trim( $input ) );
 		$nFields = count( $fields );
 		if ( $nFields >= 2 ) {
@@ -169,15 +168,14 @@ class TimelineTableEvent {
 	 * Render HTML cell in table
 	 */
 	public function render( $parser, $depth, $flagVert = false ) {
-
 		$spanDir = ( $flagVert ) ? 'rowspan' : 'colspan';
 
 		// Determine number of cells in current block
 		$nEventCells = $this->getNumCells( $depth );
 
 		// Create the event cell
-		$cellopts = array( $spanDir => $nEventCells,
-			'class' => $this->cellCSSClass );
+		$cellopts = [ $spanDir => $nEventCells,
+			'class' => $this->cellCSSClass ];
 		if ( strcmp( trim( $this->cellCSSStyle ), "" ) ) {
 			$cellopts['style'] = htmlspecialchars( $this->cellCSSStyle );
 		}
@@ -223,4 +221,3 @@ class TimelineTableEvent {
 		return $this->endDate;
 	}
 }
-

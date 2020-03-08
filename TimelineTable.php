@@ -9,7 +9,7 @@
  * @ingroup Extensions
  * @author Thibault Marin
  * @link https://www.mediawiki.org/wiki/Extension:TimelineTable
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  *
  */
 if ( function_exists( 'wfLoadExtension' ) ) {

@@ -12,13 +12,13 @@ class TimelineTableTable {
 	public $tableCaption = "";
 
 	/// Table content: list of event lists (one list per table row)
-	public $tableLines = array();
+	public $tableLines = [];
 
 	/// Table header lines
-	public $tableHeaderLines = array();
+	public $tableHeaderLines = [];
 
 	/// Table footer lines
-	public $tableFooterLines = array();
+	public $tableFooterLines = [];
 
 	/// Earliest start date
 	public $startDate;
@@ -49,43 +49,42 @@ class TimelineTableTable {
 	 * Render table vertically
 	 */
 	public function renderVertical( $parser, $depth ) {
-
 		// Total number of cells
 		$nTotalCells = TimelineTableDateDiffHelper::getNumCells(
 			$this->startDate, $this->endDate, $depth );
 
 		// Build helper arrays for transposition
-		$locTableHeader = array();
-		$locTableFooter = array();
-		$locTableEntry  = array();
-		$idxMapHeader = array();
-		$idxMapFooter = array();
-		$idxMapentry  = array();
+		$locTableHeader = [];
+		$locTableFooter = [];
+		$locTableEntry  = [];
+		$idxMapHeader = [];
+		$idxMapFooter = [];
+		$idxMapentry  = [];
 		if ( count( $this->tableHeaderLines ) > 0 ) {
 			$locTableHeader = array_fill( 0, count( $this->tableHeaderLines ),
-			                              null );
+										  null );
 			$this->fillVertTable( $this->tableHeaderLines, $nTotalCells,
-			                      $locTableHeader, $depth );
+								  $locTableHeader, $depth );
 			$idxMapHeader = array_fill( 0, count( $this->tableHeaderLines ),
-		                            0 );
+									0 );
 		}
 		if ( count( $this->tableFooterLines ) > 0 ) {
-			$locTableFooter = array_fill( 0, count( $this->tableFooterLines ) ,
-			                              null );
+			$locTableFooter = array_fill( 0, count( $this->tableFooterLines ),
+										  null );
 			$this->fillVertTable( $this->tableFooterLines, $nTotalCells,
-			                      $locTableFooter, $depth );
+								  $locTableFooter, $depth );
 			$idxMapFooter = array_fill( 0, count( $this->tableFooterLines ),
-			                            0 );
+										0 );
 		}
 		if ( count( $this->tableLines ) > 0 ) {
 			$locTableEntry = array_fill( 0, count( $this->tableLines ), null );
 			$this->fillVertTable( $this->tableLines, $nTotalCells,
-			                      $locTableEntry, $depth );
+								  $locTableEntry, $depth );
 			$idxMapEntry = array_fill( 0, count( $this->tableLines ), 0 );
 		}
 
 		// Start the table
-		$ts = Html::openElement( 'table', array( 'class' => 'tl_table' ) );
+		$ts = Html::openElement( 'table', [ 'class' => 'tl_table' ] );
 
 		for ( $i = 0; $i < $nTotalCells; $i++ ) {
 			$ts .= Html::openElement( 'tr' );
@@ -93,27 +92,27 @@ class TimelineTableTable {
 			if ( $i == 0 ) {
 				if ( !empty( $this->tableTitle ) ) {
 					$ts .= Html::element( 'th',
-					                      array( 'rowspan' => $nTotalCells,
-					                             'class' => 'tl_title' ),
-					                      $this->tableTitle );
+										  [ 'rowspan' => $nTotalCells,
+												 'class' => 'tl_title' ],
+										  $this->tableTitle );
 				}
 			}
 
 			$ts .= $this->renderVertRow( $this->tableHeaderLines,
-			                             $locTableHeader, $i, $idxMapHeader,
-			                             $parser, $depth, 'th' );
+										 $locTableHeader, $i, $idxMapHeader,
+										 $parser, $depth, 'th' );
 			$ts .= $this->renderVertRow( $this->tableLines,
-			                             $locTableEntry, $i, $idxMapEntry,
-			                             $parser, $depth, 'td' );
+										 $locTableEntry, $i, $idxMapEntry,
+										 $parser, $depth, 'td' );
 			$ts .= $this->renderVertRow( $this->tableFooterLines,
-			                             $locTableFooter, $i, $idxMapFooter,
-			                             $parser, $depth, 'th' );
+										 $locTableFooter, $i, $idxMapFooter,
+										 $parser, $depth, 'th' );
 
 			if ( $i == 0 ) {
 				if ( !empty( $this->tableCaption ) ) {
-					$ts .= Html::element( 'td', array( 'rowspan' => $nTotalCells,
-					                                    'class' => 'tl_foot' ),
-					                      $this->tableCaption );
+					$ts .= Html::element( 'td', [ 'rowspan' => $nTotalCells,
+														'class' => 'tl_foot' ],
+										  $this->tableCaption );
 				}
 			}
 
@@ -127,20 +126,19 @@ class TimelineTableTable {
 	}
 
 	public function renderHorizontal( $parser, $depth ) {
-
 		// Total number of cells
 		$nTotalCells = TimelineTableDateDiffHelper::getNumCells(
 			$this->startDate, $this->endDate, $depth );
 
 		// Start the table
-		$ts = Html::openElement( 'table', array( 'class' => 'tl_table' ) );
+		$ts = Html::openElement( 'table', [ 'class' => 'tl_table' ] );
 
 		// Header: title line + headers
 		if ( strlen( $this->tableTitle ) > 0 ||
 			count( $this->tableHeaderLines )
 		) {
 
-			$ts .= Html::openElement( 'thead', array( 'class' => 'tl_header' ) );
+			$ts .= Html::openElement( 'thead', [ 'class' => 'tl_header' ] );
 			$ts .= $this->renderTitleCaption( $this->tableTitle, $nTotalCells,
 				'tl_title', 'th' );
 			$ts .= $this->renderHeaderFooter( $this->tableHeaderLines,
@@ -154,7 +152,7 @@ class TimelineTableTable {
 		) {
 
 			// Header: title line + headers
-			$ts .= Html::openElement( 'tfoot', array( 'class' => 'tl_footer' ) );
+			$ts .= Html::openElement( 'tfoot', [ 'class' => 'tl_footer' ] );
 			$ts .= $this->renderHeaderFooter( $this->tableFooterLines,
 				'tl_foot', $depth, $parser,
 				'th' );
@@ -164,7 +162,7 @@ class TimelineTableTable {
 		}
 
 		// Body: Events
-		$ts .= Html::openElement( 'tbody', array( 'class' => 'tl_body' ) );
+		$ts .= Html::openElement( 'tbody', [ 'class' => 'tl_body' ] );
 		foreach ( $this->tableLines as $hLine ) {
 			$ts .= Html::openElement( 'tr' );
 			foreach ( $hLine as $hEvent ) {
@@ -196,8 +194,8 @@ class TimelineTableTable {
 		if ( !empty( $HFText ) ) {
 
 			$ts .= Html::openElement( 'tr' );
-			$ts .= Html::element( $type, array( 'colspan' => $nTotalCells,
-					'class' => $CSSclass ),
+			$ts .= Html::element( $type, [ 'colspan' => $nTotalCells,
+					'class' => $CSSclass ],
 				$HFText );
 			$ts .= Html::closeElement( 'tr' );
 		}
@@ -236,12 +234,12 @@ class TimelineTableTable {
 	 * Create helper table for vertical table
 	 */
 	private function fillVertTable( $tableLines, $nTotalCells,
-	                                &$outLocTable, $depth ) {
-		for ( $hi = 0; $hi < count( $tableLines ); $hi++) {
-			$outLocTable[ $hi ] = array_fill( 0, $nTotalCells, false);
+									&$outLocTable, $depth ) {
+		for ( $hi = 0; $hi < count( $tableLines ); $hi++ ) {
+			$outLocTable[ $hi ] = array_fill( 0, $nTotalCells, false );
 
 			$idxStart = 0;
-			for ( $ei = 0; $ei < count( $tableLines[ $hi ] ); $ei++) {
+			for ( $ei = 0; $ei < count( $tableLines[ $hi ] ); $ei++ ) {
 				$event = $tableLines[ $hi ][ $ei ];
 				$nCells = $event->getNumCells( $depth );
 				$outLocTable[ $hi ][ $idxStart ] = true;
@@ -254,9 +252,9 @@ class TimelineTableTable {
 	 * Render single row of vertical table
 	 */
 	private function renderVertRow( $tableLines, $locTable, $rowIdx, &$idxMap,
-	                                $parser, $depth, $HTMLtype ) {
+									$parser, $depth, $HTMLtype ) {
 		$ts = '';
-		for ( $hi = 0; $hi < count( $tableLines ); $hi++) {
+		for ( $hi = 0; $hi < count( $tableLines ); $hi++ ) {
 			if ( $locTable[ $hi ][ $rowIdx ] ) {
 				$hEvent = $tableLines[ $hi ][ $idxMap[ $hi ] ];
 				if ( $hEvent->isValid() ) {
@@ -272,12 +270,10 @@ class TimelineTableTable {
 		return $ts;
 	}
 
-
 	/**
 	 * Parse timelinetable input
 	 */
 	public function parse( $input, $depth ) {
-
 		// Extract parameters from global variables
 		global $wgTimelineTableFieldSeparator;
 		global $wgTimelineTableLineSeparator;
@@ -294,7 +290,7 @@ class TimelineTableTable {
 			$eventList = explode( $wgTimelineTableEventSeparator,
 				trim( $val ) );
 			$flagFirstEventLine = true;
-			$this->tableLines[$k] = array();
+			$this->tableLines[$k] = [];
 
 			// Loop over events in the current line
 			foreach ( $eventList as $eventStr ) {
@@ -409,7 +405,6 @@ class TimelineTableTable {
 	 * an input argument.
 	 */
 	public static function getDepthFromFirstDate( $input ) {
-
 		// Extract parameters from global variables
 		global $wgTimelineTableFieldSeparator;
 		global $wgTimelineTableLineSeparator;
@@ -479,14 +474,13 @@ class TimelineTableTable {
 	public function addHeader( $level, $depth, $cssClass, $isHeader, $format,
 		$substr
 	) {
-
 		// Select header/footer mode
 		if ( $isHeader ) {
 			$k = count( $this->tableHeaderLines );
-			$this->tableHeaderLines[$k] = array();
+			$this->tableHeaderLines[$k] = [];
 		} else {
 			$k = count( $this->tableFooterLines );
-			$this->tableFooterLines[$k] = array();
+			$this->tableFooterLines[$k] = [];
 		}
 
 		// Use header style for both header and footer
@@ -515,7 +509,7 @@ class TimelineTableTable {
 					}
 					$nextYearStr = strval( intval( $str ) + 1 );
 					TimelineTableDateDiffHelper::getFirstDay( $curDate,
-					                                          $nextYearStr );
+															  $nextYearStr );
 					unset( $startDate );
 					unset( $endDate );
 					unset( $hEvent );
@@ -573,7 +567,7 @@ class TimelineTableTable {
 					}
 					$startDate = clone $curDate;
 					$endDate = clone $curDate;
-					$endDate->setTime(23, 59, 59);
+					$endDate->setTime( 23, 59, 59 );
 					if ( $endDate > $this->endDate ) {
 						$endDate = $this->endDate;
 					}
@@ -634,7 +628,7 @@ class TimelineTableTable {
 					$curHour = intval( $endDate->format( 'H' ) );
 					$curMinute = intval( $endDate->format( 'i' ) );
 					$curSecond = intval( $endDate->format( 's' ) );
-					$endDate->setTime($curHour, 59, 59);
+					$endDate->setTime( $curHour, 59, 59 );
 					if ( $endDate > $this->endDate ) {
 						$endDate = $this->endDate;
 					}
@@ -664,7 +658,7 @@ class TimelineTableTable {
 					$curHour = intval( $endDate->format( 'h' ) );
 					$curMinute = intval( $endDate->format( 'i' ) );
 					$curSecond = intval( $endDate->format( 's' ) );
-					$endDate->setTime($curHour, $curMinute, 59);
+					$endDate->setTime( $curHour, $curMinute, 59 );
 					if ( $endDate > $this->endDate ) {
 						$endDate = $this->endDate;
 					}
@@ -694,7 +688,7 @@ class TimelineTableTable {
 					$curHour = intval( $endDate->format( 'h' ) );
 					$curMinute = intval( $endDate->format( 'i' ) );
 					$curSecond = intval( $endDate->format( 's' ) );
-					//$endDate->setTime($curHour, $curMinute, 59);
+					// $endDate->setTime($curHour, $curMinute, 59);
 					if ( $endDate > $this->endDate ) {
 						$endDate = $this->endDate;
 					}
@@ -717,4 +711,3 @@ class TimelineTableTable {
 		}
 	}
 }
-

@@ -18,7 +18,7 @@ class TimelineTableHooks {
 	/**
 	 * After tidy
 	 */
-	public static function efTimelineTableAfterTidy( & $parser, & $text ) {
+	public static function efTimelineTableAfterTidy( &$parser, &$text ) {
 		// find markers in $text
 		// replace markers with actual output
 		global $markerList;
@@ -52,7 +52,7 @@ class TimelineTableHooks {
 	 */
 	private static function makeErrorOutputString( $errMsg ) {
 		$errMsg = "TimelineTable:<br/>" . $errMsg;
-		$errMsg = Html::rawElement( 'pre', array(), $errMsg );
+		$errMsg = Html::rawElement( 'pre', [], $errMsg );
 
 		return self::makeOutputString( $errMsg );
 	}
@@ -63,8 +63,7 @@ class TimelineTableHooks {
 	public static function efTimelineTableRender( $input, array $args,
 		Parser $parser, PPFrame $frame = null
 	) {
-
-		if ( is_null( $frame ) ) {
+		if ( $frame === null ) {
 			return self::makeOutputString( $input );
 		}
 
@@ -118,29 +117,29 @@ class TimelineTableHooks {
 		// format: see [http://www.php.net/manual/en/function.date.php]
 		// substr: number of characters to display (only used for month with
 		//         format F or M and days with format D or l)
-		$hDefaultOpts = array(
-			TimelineTableDepthDesc::Year => array( 'loc' => 1,
+		$hDefaultOpts = [
+			TimelineTableDepthDesc::Year => [ 'loc' => 1,
 				'format' => 'Y',
-				'substr' => 0 ),
-			TimelineTableDepthDesc::Month => array( 'loc' => 1,
+				'substr' => 0 ],
+			TimelineTableDepthDesc::Month => [ 'loc' => 1,
 				'format' => $monthFormat,
-				'substr' => 0 ),
-			TimelineTableDepthDesc::Week => array( 'loc' => 0,
+				'substr' => 0 ],
+			TimelineTableDepthDesc::Week => [ 'loc' => 0,
 				'format' => 'W',
-				'substr' => 0 ),
-			TimelineTableDepthDesc::Day => array( 'loc' => 1,
+				'substr' => 0 ],
+			TimelineTableDepthDesc::Day => [ 'loc' => 1,
 				'format' => 'j',
-				'substr' => 0 ),
-			TimelineTableDepthDesc::Hour => array( 'loc' => 0,
+				'substr' => 0 ],
+			TimelineTableDepthDesc::Hour => [ 'loc' => 0,
 				'format' => 'H',
-				'substr' => 0 ),
-			TimelineTableDepthDesc::Minute => array( 'loc' => 0,
+				'substr' => 0 ],
+			TimelineTableDepthDesc::Minute => [ 'loc' => 0,
 				'format' => 'i',
-				'substr' => 0 ),
-			TimelineTableDepthDesc::Second => array( 'loc' => 0,
+				'substr' => 0 ],
+			TimelineTableDepthDesc::Second => [ 'loc' => 0,
 				'format' => 's',
-				'substr' => 0 )
-		);
+				'substr' => 0 ]
+		];
 		// Use weeks
 		if ( isset( $args['useweeks'] ) ||
 			$depth == TimelineTableDepthDesc::Week
@@ -149,8 +148,8 @@ class TimelineTableHooks {
 		}
 
 		// Header/footer list
-		$headerLines = array();
-		$footerLines = array();
+		$headerLines = [];
+		$footerLines = [];
 
 		if ( isset( $args['headers'] ) || isset( $args['footers'] ) ) {
 			// populate the headers (hi=0) / footers (hi=1) table:
@@ -217,6 +216,7 @@ class TimelineTableHooks {
 										$args[$argName] )->escaped();
 
 									return self::makeErrorOutputString( $eMsg );
+									// phpcs:ignore Squiz.PHP.NonExecutableCode.Unreachable
 									break;
 							}
 						}
@@ -237,10 +237,10 @@ class TimelineTableHooks {
 						}
 
 						// Add header/footer to list
-						array_push( $HFLines, array( 'level' => $level,
+						array_push( $HFLines, [ 'level' => $level,
 							'format' => $format,
 							'substr' => $substr,
-							'cssclass' => $css ) );
+							'cssclass' => $css ] );
 					}
 				}
 			}
@@ -299,16 +299,16 @@ class TimelineTableHooks {
 						continue;
 					}
 					if ( $loc == 1 || $loc == 2 ) {
-						array_push( $headerLines, array( 'level' => $level,
+						array_push( $headerLines, [ 'level' => $level,
 							'format' => $format,
 							'substr' => $substr,
-							'cssclass' => $css ) );
+							'cssclass' => $css ] );
 					}
 					if ( $loc == -1 || $loc == 2 ) {
-						array_push( $footerLines, array( 'level' => $level,
+						array_push( $footerLines, [ 'level' => $level,
 							'format' => $format,
 							'substr' => $substr,
-							'cssclass' => $css ) );
+							'cssclass' => $css ] );
 					}
 				}
 			}

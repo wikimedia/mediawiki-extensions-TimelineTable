@@ -14,11 +14,11 @@
 		]
 	},
 	"AutoloadClasses": {
-		"TimelineTableHooks": "includes/TimelineTable.Hooks.php",
-		"TimelineTableEvent": "includes/TimelineTable.Event.php",
-		"TimelineTableDepthDesc": "includes/TimelineTable.DateDiffHelper.php",
-		"TimelineTableDateDiffHelper": "includes/TimelineTable.DateDiffHelper.php",
-		"TimelineTableTable": "includes/TimelineTable.Table.php"
+		"TimelineTableHooks": "includes/TimelineTableHooks.php",
+		"TimelineTableEvent": "includes/TimelineTableEvent.php",
+		"TimelineTableDepthDesc": "includes/TimelineTableDepthDesc.php",
+		"TimelineTableDateDiffHelper": "includes/TimelineTableDateDiffHelper.php",
+		"TimelineTableTable": "includes/TimelineTableTable.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "TimelineTableHooks::efTimelineTableParserInit",
