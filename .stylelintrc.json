@@ -1,0 +1,9 @@
+{
+	"extends": "stylelint-config-wikimedia",
+	"rules": {
+		"block-no-empty": null,
+		"color-named": null,
+		"function-blacklist": null,
+		"function-parentheses-space-inside": null
+	}
+}
