@@ -260,7 +260,7 @@ class TimelineTableTable {
 					if ( $hEvent->isValid() ) {
 						$ts .= $hEvent->render( $parser, $depth );
 					} else {
-						$errMsg = $hEvent->getErrMsg();
+						$errMsg = $hEvent->getErrorMsg();
 						$ts .= Html::element( $HTMLtype, null, $errMsg );
 						break;
 					}
@@ -316,7 +316,7 @@ class TimelineTableTable {
 				if ( $hEvent->isValid() ) {
 					$ts .= $hEvent->render( $parser, $depth, true );
 				} else {
-					$errMsg = $hEvent->getErrMsg();
+					$errMsg = $hEvent->getErrorMsg();
 					$ts .= Html::element( $HTMLtype, null, $errMsg );
 					break;
 				}
