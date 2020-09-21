@@ -10,10 +10,10 @@ class TimelineTableDateDiffHelper {
 	/**
 	 * Get first day in year (modify input $date)
 	 *
-	 * @param DateTime &$date
+	 * @param DateTime $date
 	 * @param int|string $year
 	 */
-	public static function getFirstDay( &$date, $year ) {
+	public static function getFirstDay( $date, $year ) {
 		$date->modify( "first day of january " . $year );
 		$date->setTime( 0, 0, 0 );
 	}
@@ -21,10 +21,10 @@ class TimelineTableDateDiffHelper {
 	/**
 	 * Get last day in year (modify input $date)
 	 *
-	 * @param DateTime &$date
+	 * @param DateTime $date
 	 * @param int|string $year
 	 */
-	public static function getLastDay( &$date, $year ) {
+	public static function getLastDay( $date, $year ) {
 		$date->modify( "last day of december " . $year );
 		$date->setTime( 23, 59, 59 );
 	}
