@@ -5,29 +5,44 @@
  */
 class TimelineTableTable {
 
-	/// Table title
+	/**
+	 * @var string Table title
+	 */
 	public $tableTitle = "";
 
-	/// Table caption
+	/**
+	 * @var string Table caption
+	 */
 	public $tableCaption = "";
 
-	/// Table content: list of event lists (one list per table row)
+	/**
+	 * @var TimelineTableEvent[][] Table content: list of event lists (one list per table row)
+	 */
 	public $tableLines = [];
 
-	/// Table header lines
+	/**
+	 * @var TimelineTableEvent[][] Table header lines
+	 */
 	public $tableHeaderLines = [];
 
-	/// Table footer lines
+	/**
+	 * @var TimelineTableEvent[][] Table footer lines
+	 */
 	public $tableFooterLines = [];
 
-	/// Earliest start date
+	/**
+	 * @var DateTime|null Earliest start date
+	 */
 	public $startDate;
 
-	/// Latest end date;
+	/**
+	 * @var DateTime|null Latest end date
+	 */
 	public $endDate;
 
 	/**
-	 * Constructor
+	 * @param string $title
+	 * @param string $caption
 	 */
 	public function __construct( $title, $caption ) {
 		$this->tableTitle = $title;
@@ -36,6 +51,11 @@ class TimelineTableTable {
 
 	/**
 	 * Render HTML table
+	 *
+	 * @param Parser $parser
+	 * @param int $depth
+	 * @param false $flagVert
+	 * @return string
 	 */
 	public function render( $parser, $depth, $flagVert = false ) {
 		if ( $flagVert ) {
@@ -47,6 +67,10 @@ class TimelineTableTable {
 
 	/**
 	 * Render table vertically
+	 *
+	 * @param Parser $parser
+	 * @param int $depth
+	 * @return string
 	 */
 	public function renderVertical( $parser, $depth ) {
 		// Total number of cells
@@ -59,7 +83,7 @@ class TimelineTableTable {
 		$locTableEntry  = [];
 		$idxMapHeader = [];
 		$idxMapFooter = [];
-		$idxMapentry  = [];
+		$idxMapEntry = [];
 		if ( count( $this->tableHeaderLines ) > 0 ) {
 			$locTableHeader = array_fill( 0, count( $this->tableHeaderLines ),
 										  null );
@@ -125,6 +149,11 @@ class TimelineTableTable {
 		return $ts;
 	}
 
+	/**
+	 * @param Parser $parser
+	 * @param int $depth
+	 * @return string
+	 */
 	public function renderHorizontal( $parser, $depth ) {
 		// Total number of cells
 		$nTotalCells = TimelineTableDateDiffHelper::getNumCells(
@@ -186,6 +215,12 @@ class TimelineTableTable {
 
 	/**
 	 * Render title/caption line
+	 *
+	 * @param string $HFText
+	 * @param int $nTotalCells
+	 * @param string $CSSclass
+	 * @param string $type
+	 * @return string
 	 */
 	private function renderTitleCaption( $HFText, $nTotalCells, $CSSclass,
 		$type
@@ -205,8 +240,15 @@ class TimelineTableTable {
 
 	/**
 	 * Render header/footer sections
+	 *
+	 * @param TimelineTableEvent[][] $tableHFLines
+	 * @param string $CSSclass
+	 * @param int $depth
+	 * @param Parser $parser
+	 * @param string $HTMLtype
+	 * @return string
 	 */
-	private function renderHeaderFooter( &$tableHFLines, $CSSclass, $depth,
+	private function renderHeaderFooter( $tableHFLines, $CSSclass, $depth,
 		$parser, $HTMLtype ) {
 		$ts = "";
 
@@ -232,6 +274,11 @@ class TimelineTableTable {
 
 	/**
 	 * Create helper table for vertical table
+	 *
+	 * @param TimelineTableEvent[][] $tableLines
+	 * @param int $nTotalCells
+	 * @param bool[][] &$outLocTable
+	 * @param int $depth
 	 */
 	private function fillVertTable( $tableLines, $nTotalCells,
 									&$outLocTable, $depth ) {
@@ -250,6 +297,15 @@ class TimelineTableTable {
 
 	/**
 	 * Render single row of vertical table
+	 *
+	 * @param TimelineTableEvent[][] $tableLines
+	 * @param bool[][] $locTable
+	 * @param int $rowIdx
+	 * @param int[] &$idxMap
+	 * @param Parser $parser
+	 * @param int $depth
+	 * @param string $HTMLtype
+	 * @return string
 	 */
 	private function renderVertRow( $tableLines, $locTable, $rowIdx, &$idxMap,
 									$parser, $depth, $HTMLtype ) {
@@ -272,6 +328,10 @@ class TimelineTableTable {
 
 	/**
 	 * Parse timelinetable input
+	 *
+	 * @param string $input
+	 * @param int $depth
+	 * @return string
 	 */
 	public function parse( $input, $depth ) {
 		// Extract parameters from global variables
@@ -403,6 +463,9 @@ class TimelineTableTable {
 	 *
 	 * This is for backward compatibility (pre 2.0) when depth is not passed as
 	 * an input argument.
+	 *
+	 * @param string $input
+	 * @return int|null
 	 */
 	public static function getDepthFromFirstDate( $input ) {
 		// Extract parameters from global variables
@@ -470,6 +533,13 @@ class TimelineTableTable {
 
 	/**
 	 * Create table lines for headers
+	 *
+	 * @param int $level
+	 * @param int $depth
+	 * @param string $cssClass
+	 * @param bool $isHeader
+	 * @param string $format
+	 * @param string $substr
 	 */
 	public function addHeader( $level, $depth, $cssClass, $isHeader, $format,
 		$substr

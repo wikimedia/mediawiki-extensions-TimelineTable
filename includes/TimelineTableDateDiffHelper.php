@@ -9,6 +9,9 @@ class TimelineTableDateDiffHelper {
 
 	/**
 	 * Get first day in year (modify input $date)
+	 *
+	 * @param DateTime &$date
+	 * @param int|string $year
 	 */
 	public static function getFirstDay( &$date, $year ) {
 		$date->modify( "first day of january " . $year );
@@ -17,6 +20,9 @@ class TimelineTableDateDiffHelper {
 
 	/**
 	 * Get last day in year (modify input $date)
+	 *
+	 * @param DateTime &$date
+	 * @param int|string $year
 	 */
 	public static function getLastDay( &$date, $year ) {
 		$date->modify( "last day of december " . $year );
@@ -25,6 +31,11 @@ class TimelineTableDateDiffHelper {
 
 	/**
 	 * Calculate the number of cells between two dates (public interface)
+	 *
+	 * @param DateTime|null $date1
+	 * @param DateTime|null $date2
+	 * @param int $depth One of the TimelineTableDepthDesc::… constants
+	 * @return int|null
 	 */
 	public static function getNumCells( $date1, $date2, $depth ) {
 		if ( !is_a( $date1, "DateTime" ) || !is_a( $date2, "DateTime" ) ) {

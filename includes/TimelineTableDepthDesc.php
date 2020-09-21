@@ -5,15 +5,19 @@
  */
 abstract class TimelineTableDepthDesc {
 
-	const Year = 0;
-	const Month = 1;
-	const Week = 2;
-	const Day = 3;
-	const Hour = 4;
-	const Minute = 5;
-	const Second = 6;
+	public const Year = 0;
+	public const Month = 1;
+	public const Week = 2;
+	public const Day = 3;
+	public const Hour = 4;
+	public const Minute = 5;
+	public const Second = 6;
 
-	// phpcs:ignore MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic
+	/**
+	 * @param string $str
+	 *
+	 * @return int|null One of the self::… constants
+	 */
 	public static function decodeDepthDesc( $str ) {
 		switch ( strtolower( $str ) ) {
 			case "year":

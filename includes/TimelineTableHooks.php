@@ -7,6 +7,8 @@ class TimelineTableHooks {
 
 	/**
 	 * Register <timelinetable> hook
+	 *
+	 * @param Parser $parser
 	 */
 	public static function efTimelineTableParserInit( $parser ) {
 		$parser->setHook( 'timelinetable',
@@ -15,8 +17,11 @@ class TimelineTableHooks {
 
 	/**
 	 * After tidy
+	 *
+	 * @param Parser $parser
+	 * @param string &$text
 	 */
-	public static function efTimelineTableAfterTidy( &$parser, &$text ) {
+	public static function efTimelineTableAfterTidy( $parser, &$text ) {
 		// find markers in $text
 		// replace markers with actual output
 		global $markerList;
@@ -33,6 +38,9 @@ class TimelineTableHooks {
 	 * Define the html code as a marker, then change it back to text in
 	 * 'efTimelineAfterTidy'. This is done to prevent the html code from being
 	 * modified afterwards.
+	 *
+	 * @param string $str
+	 * @return string
 	 */
 	private static function makeOutputString( $str ) {
 		global $markerList;
@@ -45,6 +53,9 @@ class TimelineTableHooks {
 
 	/**
 	 * Add <pre></pre> tags around error message and return
+	 *
+	 * @param string $errMsg
+	 * @return string
 	 */
 	private static function makeErrorOutputString( $errMsg ) {
 		$errMsg = "TimelineTable:<br/>" . $errMsg;
@@ -55,6 +66,12 @@ class TimelineTableHooks {
 
 	/**
 	 * Main function: parse input and create HTML table with events
+	 *
+	 * @param string $input
+	 * @param string[] $args
+	 * @param Parser $parser
+	 * @param PPFrame|null $frame
+	 * @return string
 	 */
 	public static function efTimelineTableRender( $input, array $args,
 		Parser $parser, PPFrame $frame = null
@@ -64,9 +81,6 @@ class TimelineTableHooks {
 		}
 
 		// Extract parameters from global variables
-		global $wgTimelineTableFieldSeparator;
-		global $wgTimelineTableDateSeparator;
-		global $wgTimelineTableLineSeparator;
 		global $wgTimelineTableAbbrMonth;
 		global $wgTimelineTableShortMonthLen;
 

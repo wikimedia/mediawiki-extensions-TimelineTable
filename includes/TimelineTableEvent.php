@@ -5,41 +5,67 @@
  */
 class TimelineTableEvent {
 
-	/// Start date
+	/**
+	 * @var DateTime|null Start date
+	 */
 	private $startDate;
 
-	/// End date
+	/**
+	 * @var DateTime|null End date
+	 */
 	private $endDate;
 
-	/// Number of cells in block (only used for freetime block)
+	/**
+	 * @var int Number of cells in block (only used for freetime block)
+	 */
 	private $nCells;
 
-	/// Event description
+	/**
+	 * @var string Event description
+	 */
 	private $text;
 
-	/// Event comment
+	/**
+	 * @var string Event comment
+	 */
 	private $comment;
 
-	/// Lenght of event text (for headers)
+	/**
+	 * @var int Lenght of event text (for headers)
+	 */
 	private $substr;
 
-	/// Cell type (td/th)
+	/**
+	 * @var string Cell type (td/th)
+	 */
 	private $cellType;
 
-	/// Tooltip for event cell
+	/**
+	 * @var string Tooltip for event cell
+	 */
 	private $tooltip;
 
-	/// Custom CSS-style for event cell
+	/**
+	 * @var string Custom CSS-style for event cell
+	 */
 	private $cellCSSStyle;
 
-	/// CSS class for event block
+	/**
+	 * @var string CSS class for event block
+	 */
 	private $cellCSSClass;
 
-	/// Event validity
+	/**
+	 * @var string Event validity
+	 */
 	private $errMsg = "";
 
 	/**
 	 * Parse event from string
+	 *
+	 * @param string $input
+	 * @param string $separator
+	 * @return bool
 	 */
 	public function parse( $input, $separator ) {
 		$fields = explode( $separator, trim( $input ) );
@@ -114,6 +140,14 @@ class TimelineTableEvent {
 
 	/**
 	 * Create event for table header/footer (e.g. year/month/week/day header)
+	 *
+	 * @param DateTime $t_startDate
+	 * @param DateTime $t_endDate
+	 * @param string $t_text
+	 * @param string $t_tooltip
+	 * @param string $t_class
+	 * @param string $t_type
+	 * @param int $t_substr
 	 */
 	public function createEvent( $t_startDate, $t_endDate, $t_text, $t_tooltip,
 		$t_class, $t_type, $t_substr = 0 ) {
@@ -129,6 +163,11 @@ class TimelineTableEvent {
 	/**
 	 * Create "event" block for free-time (determined by the number of cells
 	 * instead of start/end dates)
+	 *
+	 * @param int $t_nCells
+	 * @param string $t_text
+	 * @param string $t_tooltip
+	 * @param string $t_class
 	 */
 	public function createEventBlock( $t_nCells, $t_text, $t_tooltip,
 		$t_class ) {
@@ -142,6 +181,8 @@ class TimelineTableEvent {
 
 	/**
 	 * Test invalid event
+	 *
+	 * @return bool
 	 */
 	public function isValid() {
 		return strlen( $this->errMsg ) == 0;
@@ -149,6 +190,9 @@ class TimelineTableEvent {
 
 	/**
 	 * Get length of event (in number of cells for desired depth)
+	 *
+	 * @param int $depth
+	 * @return int|null
 	 */
 	public function getNumCells( $depth ) {
 		// Determine number of cells in current block
@@ -166,6 +210,11 @@ class TimelineTableEvent {
 
 	/**
 	 * Render HTML cell in table
+	 *
+	 * @param Parser $parser
+	 * @param int $depth
+	 * @param bool $flagVert
+	 * @return string
 	 */
 	public function render( $parser, $depth, $flagVert = false ) {
 		$spanDir = ( $flagVert ) ? 'rowspan' : 'colspan';
@@ -201,21 +250,21 @@ class TimelineTableEvent {
 	}
 
 	/**
-	 * Accessor for error message
+	 * @return string
 	 */
 	public function getErrorMsg() {
 		return $this->errMsg;
 	}
 
 	/**
-	 * Accessor for start date
+	 * @return DateTime|null
 	 */
 	public function getStartDate() {
 		return $this->startDate;
 	}
 
 	/**
-	 * Accessor for end date
+	 * @return DateTime|null
 	 */
 	public function getEndDate() {
 		return $this->endDate;
