@@ -11,8 +11,6 @@ class TimelineTableHooks {
 	public static function efTimelineTableParserInit( $parser ) {
 		$parser->setHook( 'timelinetable',
 			'TimelineTableHooks::efTimelineTableRender' );
-
-		return true;
 	}
 
 	/**
@@ -23,14 +21,12 @@ class TimelineTableHooks {
 		// replace markers with actual output
 		global $markerList;
 		if ( !isset( $markerList ) ) {
-			return true;
+			return;
 		}
 		for ( $i = 0; $i < count( $markerList ); $i++ ) {
 			$text = preg_replace( '/xx-marker' . $i . '-xx/',
 				$markerList[$i], $text );
 		}
-
-		return true;
 	}
 
 	/**
