@@ -4,6 +4,7 @@
 		"block-no-empty": null,
 		"color-named": null,
 		"function-blacklist": null,
-		"function-parentheses-space-inside": null
+		"function-parentheses-space-inside": null,
+		"function-disallowed-list": null
 	}
 }
