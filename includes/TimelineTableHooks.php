@@ -226,8 +226,6 @@ class TimelineTableHooks {
 										$args[$argName] )->escaped();
 
 									return self::makeErrorOutputString( $eMsg );
-									// phpcs:ignore Squiz.PHP.NonExecutableCode.Unreachable
-									break;
 							}
 						}
 
