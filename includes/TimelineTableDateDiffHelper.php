@@ -72,7 +72,6 @@ class TimelineTableDateDiffHelper {
 				return ( $int->invert ? -1 : 1 ) * $nMonths;
 
 			case TimelineTableDepthDesc::Week:
-
 				if ( $startYear == $endYear ) {
 					$w1 = intval( $date1->format( "W" ) );
 					$w2 = intval( $date2->format( "W" ) );
