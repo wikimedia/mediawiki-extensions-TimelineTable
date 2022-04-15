@@ -1,4 +1,5 @@
 {
+	"name": "TimelineTable",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
