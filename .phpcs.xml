@@ -5,11 +5,13 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingReturn" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.WrongStyle" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgTimelineTableDateSeparator" />
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgTimelineTableFieldSeparator" />
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgTimelineTableLineSeparator" />
 		<exclude name="PSR12.Properties.ConstantVisibility.NotFound" />
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.BodyOnNextLineCASE" />
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php"/>
