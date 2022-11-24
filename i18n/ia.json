@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"timelinetable-desc": "Crear un tabella que contine un chronologia",
+	"timelinetable-error-parsestart": "Error de syntaxe in initio del evento: $1.",
+	"timelinetable-error-parseend": "Error de syntaxe in fin del evento: $1.",
+	"timelinetable-error-parseargs": "Error de syntaxe in le datas del evento: $1.",
+	"timelinetable-error-overlap": "Eventos se imbrica sur le mesme linea: $1.",
+	"timelinetable-error-free": "Error obtenente le bloco de tempore libere initial/final al linea $1.",
+	"timelinetable-error-depth": "Non poteva obtener le parametro de profunditate.",
+	"timelinetable-error-hf": "Error legente capites/pedes de pagina: $1=$2.",
+	"timelinetable-error-negdate": "Le data de fin debe esser posterior al data de initio: $1"
+}
