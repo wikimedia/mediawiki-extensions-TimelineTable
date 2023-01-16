@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"timelinetable-desc": "Ustvari tabelo s časovnico",
+	"timelinetable-error-parsestart": "Napaka pri razčlenjevanju začetka dogodka: $1.",
+	"timelinetable-error-parseend": "Napaka pri razčlenjevanju konca dogodka: $1.",
+	"timelinetable-error-parseargs": "Napaka pri razčlenjevanju datumov dogodkov: $1.",
+	"timelinetable-error-overlap": "Dogodki v isti vrstici se prekrivajo: $1.",
+	"timelinetable-error-free": "Napaka pri pridobivanju uvodnega/končnega bloka prostega časa v vrstici $1.",
+	"timelinetable-error-depth": "Ni bilo mogoče pridobiti parametra globine.",
+	"timelinetable-error-hf": "Napaka pri branju glav/nog: $1 = $2.",
+	"timelinetable-error-negdate": "Končni datum mora biti poznejši od začetnega datuma: $1."
+}
