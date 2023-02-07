@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"timelinetable-desc": "יצירת טבלה שמכילה ציר זמן",
+	"timelinetable-error-parsestart": "שגיאה בפענוח תחילת האירוע: $1.",
+	"timelinetable-error-parseend": "שגיאה בפענוח סוף האירוע: $1.",
+	"timelinetable-error-parseargs": "שגיאה בפענוח תאריכי האירוע: $1.",
+	"timelinetable-error-overlap": "אירועים באותו ציר חופפים: $1.",
+	"timelinetable-error-free": "שגיאה בקבלת רצף זמן חופשי מוביל/נגרר בשורה $1.",
+	"timelinetable-error-depth": "לא היה ניתן להשיג פרמטר עומק.",
+	"timelinetable-error-hf": "שגיאה בקריאת כותרות עליונות/תחתונות: $1=$2.",
+	"timelinetable-error-negdate": "תאריך הסיום צריך להיות מאוחר מתאריך ההתחלה: $1."
+}
