@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"timelinetable-desc": "Een tabel met een tijdlijn maken",
+	"timelinetable-error-parsestart": "Fout bij het interpreteren van het begin van de gebeurtenis: $1",
+	"timelinetable-error-parseend": "Fout bij het interpreteren van het einde van de gebeurtenis: $1",
+	"timelinetable-error-parseargs": "Fout bij het interpreteren van de datums van de gebeurtenis: $1",
+	"timelinetable-error-overlap": "Gebeurtenissen op dezelfde regel overlappen elkaar: $1.",
+	"timelinetable-error-free": "Fout bij het opvragen van het inleidende/afsluitende vrijetijdblok op regel $1.",
+	"timelinetable-error-depth": "Kan de diepteparameter niet verkrijgen.",
+	"timelinetable-error-hf": "Fout bij lezen kop-/voetteksten: $1=$2.",
+	"timelinetable-error-negdate": "De einddatum moet later zijn dan de startdatum: $1."
+}
