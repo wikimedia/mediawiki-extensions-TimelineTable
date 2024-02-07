@@ -16,7 +16,7 @@ th.tl_title {
 	padding: 1px;
 	border-style: outset;
 	border-color: blue;
-	background-color: rgb(243, 248, 252);
+	background-color: rgb( 243, 248, 252 );
 	border-radius: 9px;
 }
 
@@ -27,7 +27,7 @@ th.tl_years {
 	padding: 1px;
 	border-style: outset;
 	border-color: blue;
-	background-color: rgb(223, 228, 252);
+	background-color: rgb( 223, 228, 252 );
 	border-radius: 4px;
 }
 
@@ -37,7 +37,7 @@ th.tl_months {
 	padding: 1px;
 	border-style: outset;
 	border-color: blue;
-	background-color: rgb(243, 248, 252);
+	background-color: rgb( 243, 248, 252 );
 	border-radius: 2px;
 }
 
@@ -47,7 +47,7 @@ th.tl_days {
 	padding: 1px;
 	border-style: outset;
 	border-color: blue;
-	background-color: rgb(243, 248, 252);
+	background-color: rgb( 243, 248, 252 );
 	border-radius: 2px;
 }
 
@@ -57,12 +57,12 @@ th.tl_weeks {
 	padding: 1px;
 	border-style: outset;
 	border-color: blue;
-	background-color: rgb(243, 248, 252);
+	background-color: rgb( 243, 248, 252 );
 	border-radius: 2px;
 }
 
 td.tl_freetime {
-	background-color: rgb(187, 210, 236);
+	background-color: rgb( 187, 210, 236 );
 	border-width: 1px;
 	border-color: black;
 	border-style: inset;
@@ -72,7 +72,7 @@ td.tl_freetime {
 td.tl_event {
 	text-align: center;
 	padding: 1px;
-	background-color: rgb(61, 114, 194);
+	background-color: rgb( 61, 114, 194 );
 	border-width: 1px;
 	border-color: white;
 	border-style: inset;
@@ -84,7 +84,7 @@ td.tl_event {
 td.tl_foot {
 	text-align: center;
 	padding: 1px;
-	background-color: rgb(243, 248, 252);
+	background-color: rgb( 243, 248, 252 );
 	border-width: 1px;
 	border-color: blue;
 	border-style: ridge;
