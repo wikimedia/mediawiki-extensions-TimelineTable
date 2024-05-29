@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"LittlePaw365",
 			"Liuxinyu970226"
 		]
 	},
-	"timelinetable-desc": "创建一个包含时间线的表格",
+	"timelinetable-desc": "创建含有时间线的表格",
 	"timelinetable-error-parsestart": "解析活动起始日时出错：$1。",
 	"timelinetable-error-parseend": "解析活动结束日时出错：$1。",
 	"timelinetable-error-parseargs": "解析活动日期时出错：$1。",
