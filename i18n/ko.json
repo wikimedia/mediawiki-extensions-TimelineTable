@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hwangjy9"
+			"Hwangjy9",
+			"Suleiman the Magnificent Television"
 		]
 	},
-	"timelinetable-desc": "타임라인을 포함한 표를 만듭니다"
+	"timelinetable-desc": "타임라인을 포함한 표를 만듭니다",
+	"timelinetable-error-parsestart": "이벤트 시작 구문 분석 오류: $1.",
+	"timelinetable-error-parseend": "이벤트 종료 구문 분석 오류: $1.",
+	"timelinetable-error-parseargs": "이벤트 날짜 구문 분석 오류: $1."
 }
