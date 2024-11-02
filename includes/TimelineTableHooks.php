@@ -74,7 +74,7 @@ class TimelineTableHooks {
 	 * @return string
 	 */
 	public static function efTimelineTableRender( $input, array $args,
-		Parser $parser, PPFrame $frame = null
+		Parser $parser, ?PPFrame $frame = null
 	) {
 		if ( $frame === null ) {
 			return self::makeOutputString( $input );
