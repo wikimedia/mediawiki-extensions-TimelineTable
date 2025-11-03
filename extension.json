@@ -6,7 +6,7 @@
 	"descriptionmsg": "timelinetable-desc",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.40.0"
 	},
 	"MessagesDirs": {
 		"TimelineTable": [
