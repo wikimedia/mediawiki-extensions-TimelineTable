@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stefan2255"
+		]
+	},
+	"timelinetable-desc": "Skapa en tabell som innehåller en tidslinje",
+	"timelinetable-error-parsestart": "Fel vid tolkning av händelsestart: $1.",
+	"timelinetable-error-parseend": "Fel vid tolkning av händelseslut: $1.",
+	"timelinetable-error-parseargs": "Fel vid tolkning av händelsedatum: $1.",
+	"timelinetable-error-overlap": "Händelser på samma rad överlappar varandra: $1.",
+	"timelinetable-error-free": "Fel vid hämtning av inledande/efterföljande ledigtidsblock på rad $1.",
+	"timelinetable-error-depth": "Kunde inte hämta djupparametern.",
+	"timelinetable-error-hf": "Fel vid läsning av sidhuvud/sidfot: $1=$2.",
+	"timelinetable-error-negdate": "Slutdatumet ska vara senare än startdatumet: $1."
+}
