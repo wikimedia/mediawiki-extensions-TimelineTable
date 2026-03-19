@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"timelinetable-desc": "يو لښتيال جوړ کړئ چې مهالوېش ولري",
+	"timelinetable-error-parsestart": "د پېښې پيل تجزيه‌کولو کې تېروتنه: $1",
+	"timelinetable-error-parseend": "د پېښې پای تجزيه‌کولو کې تېروتنه: $1",
+	"timelinetable-error-parseargs": "د پېښې نېټې تجزيه‌کولو کې تېروتنه: $1",
+	"timelinetable-error-overlap": "په ورته کرښه کې پېښې يو بل سره ننوتې دي: $1",
+	"timelinetable-error-free": "په $1 کرښه کې د مخکښې/ناوخته برخې ترلاسه کولو پرمهال تېروتنه.",
+	"timelinetable-error-depth": "د ژوروالي ارزښت نشي ترلاسه کېدای.",
+	"timelinetable-error-hf": "د سرليکونو/پای‌ليکونو په لوستلو کې تېروتنه: $1=$2.",
+	"timelinetable-error-negdate": "پای نېته بايد له پيل نېټې وروسته وي: $1."
+}
