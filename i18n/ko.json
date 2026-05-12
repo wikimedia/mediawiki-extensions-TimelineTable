@@ -2,11 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Hwangjy9",
-			"Suleiman the Magnificent Television"
+			"Suleiman the Magnificent Television",
+			"Tensama0415"
 		]
 	},
 	"timelinetable-desc": "타임라인을 포함한 표를 만듭니다",
 	"timelinetable-error-parsestart": "이벤트 시작 구문 분석 오류: $1.",
 	"timelinetable-error-parseend": "이벤트 종료 구문 분석 오류: $1.",
-	"timelinetable-error-parseargs": "이벤트 날짜 구문 분석 오류: $1."
+	"timelinetable-error-parseargs": "이벤트 날짜 구문 분석 오류: $1.",
+	"timelinetable-error-overlap": "같은 선에 겹친 이벤트들: $1.",
+	"timelinetable-error-hf": "머릿글/바닥글 읽기 오류: $1=$2.",
+	"timelinetable-error-negdate": "종료 날짜는 시작 날짜 이후여야 합니다: $1."
 }
