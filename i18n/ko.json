@@ -11,6 +11,8 @@
 	"timelinetable-error-parseend": "이벤트 종료 구문 분석 오류: $1.",
 	"timelinetable-error-parseargs": "이벤트 날짜 구문 분석 오류: $1.",
 	"timelinetable-error-overlap": "같은 선에 겹친 이벤트들: $1.",
+	"timelinetable-error-free": "$1 줄에서 선행/후행 프리타임 블록을 가져오는 중 오류가 발생했습니다.",
+	"timelinetable-error-depth": "깊이 매개변수를 가져올 수 없습니다.",
 	"timelinetable-error-hf": "머릿글/바닥글 읽기 오류: $1=$2.",
 	"timelinetable-error-negdate": "종료 날짜는 시작 날짜 이후여야 합니다: $1."
 }
