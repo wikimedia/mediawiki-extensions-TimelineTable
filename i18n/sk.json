@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"timelinetable-desc": "Vytvára tabuľku obsahujúcu časovú os",
+	"timelinetable-error-parsestart": "Chyba pri spracovaní začiatku udalosti: $1.",
+	"timelinetable-error-parseend": "Chyba pri spracovaní konca udalosti: $1.",
+	"timelinetable-error-parseargs": "Chyba pri spracovaní dátumov udalosti: $1.",
+	"timelinetable-error-overlap": "Udalosti na tom istom riadku sa prekrývajú: $1.",
+	"timelinetable-error-free": "Chyba pri získavaní úvodného/koncového bloku voľného času na riadku $1.",
+	"timelinetable-error-depth": "Nepodarilo sa získať parameter hĺbky.",
+	"timelinetable-error-hf": "Chyba pri čítaní hlavičiek/piat: $1=$2.",
+	"timelinetable-error-negdate": "Dátum konca by mal byť neskorší ako dátum začiatku: $1."
+}
